@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%-include('./templates/header.ejs')%>
+</head>
+
+<body>
+    <%-include('./templates/navegation.ejs')%>
+        <div class="container d-flex justify-content-center align-items-center table-container">
+            <div class="w-100">
+                <table class="table table-bordered">
+                    <thead class="thead-light">
+                        <tr>
+                            <th scope="col">id</th>
+                            <th scope="col">Nombre</th>
+                            <th scope="col">Apellido</th>
+                            <th scope="col">Materia</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% data.forEach((persona) => { %>
+                            <tr>
+                                <th scope="row">1</th>
+                                <td>
+                                    <%= persona.id %>
+                                </td>
+                                <td>
+                                    <%= persona.Nombre %>
+                                </td>
+                                <td>
+                                    <%= persona.apellido %>
+                                </td>
+                                <td>
+                                    <%= persona.materia %>
+                                </td>
+                            </tr>
+                            <% }); %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+</body>
+
+</html>
